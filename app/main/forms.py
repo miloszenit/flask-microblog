@@ -20,6 +20,14 @@ class EmptyForm(FlaskForm):
     submit = SubmitField('Submit')
 
 
+class EmptyForm2(FlaskForm):
+    pass
+
+
+class SearchForm(FlaskForm):
+    searched = StringField('Searched', validators=[DataRequired()])
+
+
 class PostForm(FlaskForm):
     post = TextAreaField('Write something...', validators=[DataRequired()])
     submit = SubmitField('Submit')
