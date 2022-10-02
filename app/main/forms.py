@@ -31,3 +31,8 @@ class SearchForm(FlaskForm):
 class PostForm(FlaskForm):
     post = TextAreaField('Write something...', validators=[DataRequired()])
     submit = SubmitField('Submit')
+
+
+class MessageForm(FlaskForm):
+    message = TextAreaField('Message', validators=[DataRequired(), Length(min=1, max=120)])
+    submit = SubmitField('Submit')
